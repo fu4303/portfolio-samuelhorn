@@ -1,5 +1,9 @@
 <template>
-  <button @click="toggleGrid" class="focus:outline-none w-48 h-48">
+  <button 
+    @click="toggleGrid" 
+    class="focus:outline-none w-48 h-48"
+    aria-label="Toggle grid overlay"
+  >
     <Grid class="h-32 mx-auto" />
   </button>
 </template>

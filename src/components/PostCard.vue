@@ -5,7 +5,11 @@
     :class="fgColor(this.data.color)"
   >
     <g-link :to="data.category.path" class="font-semibold text-xxxs uppercase tracking-widest relative z-10">{{ data.category.title }}</g-link>
-    <g-link :to="data.path" class="absolute inset-0"></g-link>
+    <g-link 
+      :to="data.path" 
+      class="absolute inset-0"
+      :aria-label="'Read the blog post: ' + data.title"
+    />
     <div class="flex-1" />
     <h2 class="mt-96 mb-16 text-md xl:mb-48 xl:text-lg font-semibold">
       {{ data.title }}

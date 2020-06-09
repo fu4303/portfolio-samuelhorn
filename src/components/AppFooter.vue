@@ -9,7 +9,7 @@
       <a href="" title="LinkedIn"><LinkedIn class="h-32 w-32 mx-8" /><span class="sr-only">LinkedIn</span></a>
       <a href="" title="Twitter"><Twitter class="h-32 w-32 mx-8" /><span class="sr-only">Twitter</span></a>
     </nav>
-    <a href="mailto:samuel@samuelhorn.com" class="opacity-50 leading-32 block" title="Say hello">samuel@samuelhorn.com</a>
+    <a href="mailto:samuel@samuelhorn.com" class="opacity-75 leading-32 block" title="Say hello">samuel@samuelhorn.com</a>
   </footer>
 </template>
 

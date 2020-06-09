@@ -1,5 +1,9 @@
 <template>
-  <button @click="toggleMenu" class="focus:outline-none w-48 h-48">
+  <button 
+    @click="toggleMenu" 
+    class="focus:outline-none w-48 h-48"
+    aria-label="Toggle menu"
+  >
     <Menu class="h-32 mx-auto" />
   </button>
 </template>
