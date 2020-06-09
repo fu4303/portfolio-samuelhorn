@@ -45,8 +45,10 @@ export default {
   },
   methods: {
     handleResize() {
-      this.window.width = window.innerWidth
-      this.window.height = window.innerHeight
+      if (process.browser) {
+        this.window.width = window.innerWidth
+        this.window.height = window.innerHeight
+      }
       this.setHeight(this.window, this.$refs.hero)
     },
     setHeight(ref, tgt) {
@@ -65,14 +67,18 @@ export default {
     }
   },
   created() {
-    window.addEventListener('resize', this.handleResize)
+    if (process.browser) {
+      window.addEventListener('resize', this.handleResize)
+    }
     this.handleResize()
   },
   mounted() {
     this.setHeight(this.window, this.$refs.hero)
   },
   destroyed() {
-    window.removeEventListener('resize', this.handleResize)
+    if (process.browser) {
+      window.removeEventListener('resize', this.handleResize)
+    }
   }
 }
 </script>
