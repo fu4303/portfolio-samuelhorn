@@ -1,0 +1,21 @@
+{
+  "name": "samuelhorn.com",
+  "private": true,
+  "scripts": {
+    "build": "gridsome build",
+    "develop": "gridsome develop",
+    "explore": "gridsome explore"
+  },
+  "dependencies": {
+    "@gridsome/remark-prismjs": "^0.3.0",
+    "@gridsome/source-filesystem": "^0.6.2",
+    "@gridsome/transformer-remark": "^0.6.0",
+    "gridsome": "^0.7.0",
+    "gsap": "^3.2.6",
+    "postcss-import": "^12.0.1",
+    "postcss-nesting": "^7.0.1",
+    "tailwindcss": "^1.4.6",
+    "vue-svg-loader": "^0.16.0",
+    "vuex": "^3.4.0"
+  }
+}

@@ -1,0 +1,6 @@
+<svg class="grid-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path class="grid-icon__first" d="M16 6V26" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  <path class="grid-icon__second" d="M16 6V26" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  <path class="grid-icon__third" d="M6 16L26 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  <path class="grid-icon__forth" d="M6 16L26 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+</svg>

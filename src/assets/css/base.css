@@ -1,0 +1,94 @@
+html,
+body {
+  min-height: 100vh;
+}
+
+body {
+  @apply font-sans font-light m-0 text-xs;
+}
+
+@screen lg {
+  body {
+    @apply text-base;
+  }
+}
+
+* {
+  @apply box-border;
+}
+
+.grid-lines .grid-bg {
+  background: var(--complementary-10);
+}
+
+.grid-lines:before,
+.grid-lines:after {
+  opacity: .3;
+  content: '';
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: 100000;
+  transform: translateX(-50%);
+  width: 2944px;
+  height: 5888px;
+}
+
+.grid-lines:before {
+  background: repeating-linear-gradient(
+      90deg,
+      var(--complementary-25) 0,
+      var(--complementary-25) 0.5px,
+      transparent 0.5px,
+      transparent 15.5px,
+      var(--complementary-25) 15.5px,
+      var(--complementary-25) 16.5px,
+      transparent 16.5px,
+      transparent 31.5px,
+      var(--complementary-25) 31.5px,
+      var(--complementary-25) 32px
+    ),
+    repeating-linear-gradient(
+      180deg,
+      var(--complementary-25) 0,
+      var(--complementary-25) 0.5px,
+      transparent 0.5px,
+      transparent 15.5px,
+      var(--complementary-25) 15.5px,
+      var(--complementary-25) 16.5px,
+      transparent 16.5px,
+      transparent 31.5px,
+      var(--complementary-25) 31.5px,
+      var(--complementary-25) 32px
+    );
+}
+
+.grid-lines:after {
+  background: repeating-linear-gradient(
+      90deg,
+      var(--complementary-25) 0,
+      var(--complementary-25) 0.5px,
+      transparent 0.5px,
+      transparent 31.5px,
+      var(--complementary-25) 31.5px,
+      var(--complementary-25) 32.5px,
+      transparent 32.5px,
+      transparent 63.5px,
+      var(--complementary-25) 63.5px,
+      var(--complementary-25) 64px
+    ),
+    repeating-linear-gradient(
+      180deg,
+      var(--complementary-25) 0,
+      var(--complementary-25) 0.5px,
+      transparent 0.5px,
+      transparent 31.5px,
+      var(--complementary-25) 31.5px,
+      var(--complementary-25) 32.5px,
+      transparent 32.5px,
+      transparent 63.5px,
+      var(--complementary-25) 63.5px,
+      var(--complementary-25) 64px
+    );
+}

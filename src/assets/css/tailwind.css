@@ -1,0 +1,25 @@
+@import "tailwindcss/base";
+@import "./base";
+@import "tailwindcss/components";
+@import "./components";
+/*@import "./markdown";*/
+/*@import "./prism";*/
+@import "tailwindcss/utilities";
+
+:root {
+  --primary: #ffffff;
+  --seconday: #EEF1F5;
+  --complementary: #1C2024;
+  --complementary-5: rgba(27,28,31,0.05);
+  --complementary-10: rgba(27,28,31,0.1);
+  --complementary-25: rgba(27,28,31,0.25);
+}
+
+.dark-mode {
+  --primary: #1C2024;
+  --seconday: #333D4A;
+  --complementary: #ffffff;
+  --complementary-5: rgba(255,255,255,0.05);
+  --complementary-10: rgba(255,255,255,0.1);
+  --complementary-25: rgba(255,255,255,0.25);
+}

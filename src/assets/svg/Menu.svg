@@ -1,0 +1,5 @@
+<svg class="menu-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path class="menu-icon__first" d="M4 9L28 9" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  <path class="menu-icon__second" d="M4 23L28 23" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  <path class="menu-icon__third" d="M4 16L28 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+</svg>
