@@ -17,9 +17,6 @@ query {
 
 <script>
 export default {
-  mounted() {
-    console.log(this.$static.metadata)
-  },
   metaInfo() {
     return {
       title: this.$static.metadata.siteName,

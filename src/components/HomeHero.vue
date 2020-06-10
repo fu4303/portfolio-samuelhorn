@@ -6,9 +6,10 @@
           class="absolute inset-0 bg-seconday z-10" 
           style="mix-blend-mode: multiply;"
         />
-        <img
+        <g-image
           class="object-cover w-auto h-full relative mx-auto lg:max-w-896 lg:h-auto xl:max-w-960 xxl:max-w-1200"
-          src="../assets/img/me.jpg"
+          src="~/assets/img/me.jpg"
+          width="2110"
           alt="Portrait of Samuel Horn af Rantzien smiling"
         />
       </div>
