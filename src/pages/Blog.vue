@@ -30,7 +30,7 @@ export default {
     meta: [
       {
         key: 'og:title',
-        name: 'og:title',
+        property: 'og:title',
         content: 'My writings',
       },
       {
