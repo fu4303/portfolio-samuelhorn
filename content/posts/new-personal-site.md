@@ -2,7 +2,7 @@
 title: New personal site powered by Vue & Gridsome
 date: 2020-03-14
 published: true
-category: 'Web'
+category: 'web'
 canonical_url: false
 description: 'So, after a couple of months without writing on wpahead.com Im finally ready with my new site.'
 color: '#733FFF'

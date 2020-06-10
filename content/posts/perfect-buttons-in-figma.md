@@ -2,7 +2,7 @@
 title: Perfect buttons with Figma auto layout
 date: 2020-02-25
 published: true
-category: 'Figma'
+category: 'figma'
 canonical_url: false
 description: 'Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.'
 color: '#f1faee'

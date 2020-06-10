@@ -1,3 +1,3 @@
 .caption {
-  @apply font-semibold text-xxxs uppercase tracking-widest opacity-50 leading-32;
+  @apply font-semibold text-xxxs uppercase tracking-widest leading-32;
 }

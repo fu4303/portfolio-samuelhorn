@@ -11,6 +11,69 @@ export default function (Vue, { router, head, isClient, appOptions }) {
 
   Vue.use(Vuex)
 
+  head.meta.push({
+    name: 'twitter:card',
+    content: 'summary_large_image',
+  })
+
+  head.meta.push({
+    name: 'twitter:site',
+    content: '@pixelcrook',
+  })
+
+  head.meta.push({
+    name: 'twitter:creator',
+    content: '@pixelcrook',
+  })
+
+  head.meta.push({
+    name: 'twitter:image',
+    content: process.env.GRIDSOME_BASE_PATH + '/share.png',
+  })
+
+  head.meta.push({
+    key: 'twitter:title',
+    name: 'twitter:title',
+    content: 'Design, thoughts & code for the next web',
+  })
+
+  head.meta.push({
+    key: 'twitter:description',
+    name: 'twitter:description',
+    content: 'Web designer & front-end web developer from Sweden who craft smooth experiences with modern web technology, always with characteristic design and performance in focus.',
+  })
+
+  head.meta.push({
+    key: 'og:title',
+    name: 'og:title',
+    content: 'Design, thoughts & code for the next web',
+  })
+
+  head.meta.push({
+    key: 'og:description',
+    name: 'og:description',
+    content: 'Web designer & front-end web developer from Sweden who craft smooth experiences with modern web technology, always with characteristic design and performance in focus.',
+  })
+
+  head.meta.push({
+    name: 'og:type',
+    content: 'article',
+  })
+
+  head.meta.push({
+    name: 'og:image',
+    content: process.env.GRIDSOME_BASE_PATH + '/share.png',
+  })
+
+  router.beforeEach((to, _from, next) => {
+    head.meta.push({
+      key: 'og:url',
+      name: 'og:url',
+      content: process.env.GRIDSOME_BASE_PATH + to.path,
+    })
+    next()
+  })
+
   appOptions.store = new Vuex.Store({
     state: {
       menu: false,

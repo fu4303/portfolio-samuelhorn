@@ -1,6 +1,6 @@
 <template>
   <article 
-    class="relative p-32 xl:p-48 bg-primary rounded-lg flex flex-col"
+    class="group relative p-32 xl:p-48 bg-primary rounded-lg flex flex-col"
     :style="bgColor(this.data.color)"
     :class="fgColor(this.data.color)"
   >
@@ -16,7 +16,7 @@
     </h2>
     <div class="flex items-center justify-between">
       <span class="font-medium text-xxs">{{ data.timeToRead }} min read</span>
-      <Arrow class="w-32 h-32" />
+      <Arrow class="w-32 h-32 transform transition-transform duration-300 group-hover:translate-x-16" />
     </div>
   </article>
 </template>

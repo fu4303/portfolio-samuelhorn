@@ -2,7 +2,7 @@
 title: How to get your Vue transitions right in Gridsome
 date: 2020-01-01
 published: true
-category: 'Vue'
+category: 'vue'
 canonical_url: false
 description: 'Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Curabitur blandit tempus porttitor. Etiam porta sem malesuada magna mollis euismod.'
 color: '#457b9d'

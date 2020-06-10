@@ -3,6 +3,7 @@
     class="site bg-seconday text-complementary min-h-screen transition-colors overflow-hidden relative"
     :class="siteClasses()"
   >
+    <div id="belowTheFold" class="absolute" style="top:100vh;"></div>
     <AppMenu />
     <AppHeader class="fixed z-30 top-0 right-0 left-0 mt-32 mx-32 lg:mt-48 lg:mx-64 xl:mt-80 xl:mx-96" />
     <div class="relative z-20 pt-20">

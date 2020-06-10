@@ -14,6 +14,8 @@
     "gsap": "^3.2.6",
     "postcss-import": "^12.0.1",
     "postcss-nesting": "^7.0.1",
+    "scrollmagic": "^2.0.7",
+    "scrollscene": "^0.0.20",
     "tailwindcss": "^1.4.6",
     "vue-svg-loader": "^0.16.0",
     "vuex": "^3.4.0"

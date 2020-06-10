@@ -18,7 +18,7 @@ export default {
     HomeProject
   },
   metaInfo: {
-    title: 'Hello, world!'
+    title: 'Design, thoughts & code for the next web'
   }
 }
 </script>

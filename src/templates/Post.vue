@@ -3,7 +3,6 @@
     <PostHero 
       :post="$page.post"
     />
-    <span id="belowTheFold" />
   </article>
 </template>
 
@@ -48,6 +47,38 @@ export default {
       this.$store.commit('setPostColor', '#ffffff')
     } else {
       this.$store.commit('setPostColor', '#1C2024')
+    }
+  },
+  metaInfo () {
+    return {
+      title: this.$page.post.title,
+      meta: [
+        {
+          key: 'og:title',
+          name: 'og:title',
+          content: this.$page.post.title,
+        },
+        {
+          key: 'twitter:title',
+          name: 'twitter:title',
+          content: this.$page.post.title,
+        },
+        {
+          key: 'description',
+          name: 'description',
+          content: this.$page.post.description,
+        },
+        {
+          key: 'og:description',
+          name: 'og:description',
+          content: this.$page.post.description,
+        },
+        {
+          key: 'twitter:description',
+          name: 'twitter:description',
+          content: this.$page.post.description,
+        },
+      ]
     }
   }
 }

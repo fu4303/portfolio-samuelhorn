@@ -43,6 +43,7 @@ module.exports = {
     },
     minHeight: {
       '512': '32rem',
+      'screen': '100vh'
     },
     maxWidth: {
       '384': '16rem',
@@ -71,6 +72,7 @@ module.exports = {
     lineHeight: {
       '48': '3rem',
       '32': '2rem',
+      '16': '1rem',
     },
     fontFamily: {
       sans: ['canada-type-gibson, sans-serif'],
@@ -98,5 +100,6 @@ module.exports = {
     }
   },
   variants: {
+    translate: ['responsive', 'hover', 'focus', 'group-hover']
   }
 }

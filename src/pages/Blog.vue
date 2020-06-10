@@ -26,7 +26,19 @@ export default {
     PostCard
   },
   metaInfo: {
-    title: 'Hello, world!'
+    title: 'My writings',
+    meta: [
+      {
+        key: 'og:title',
+        name: 'og:title',
+        content: 'My writings',
+      },
+      {
+        key: 'twitter:title',
+        name: 'twitter:title',
+        content: 'My writings',
+      },
+    ]
   }
 }
 </script>

@@ -1,8 +1,8 @@
 ---
-title: Vertical rythm with Tailwind CSS
+title: Leverage vertical rythm with Tailwind & Gridsome
 date: 2020-03-15
 published: true
-category: 'Random'
+category: 'random'
 canonical_url: false
 description: 'Vestibulum id ligula porta felis euismod semper. Nullam id dolor id nibh ultricies vehicula ut id elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
 ---

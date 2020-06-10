@@ -2,7 +2,7 @@
 title: This is just another post
 date: 2020-02-25
 published: true
-category: 'Web'
+category: 'web'
 canonical_url: false
 description: 'Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.'
 color: '#1B1D29'
