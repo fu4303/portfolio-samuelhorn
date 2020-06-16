@@ -10,6 +10,9 @@
       <slot />
     </div>
     <AppFooter class="relative z-20" />
+    <div id="bgSlide" class="fixed inset-0 z-50 transform translate-y-full bg-primary flex items-center justify-center flex-col">
+      <span id="bgSlideText" class="mt-16 text-lg font-medium" v-html="randomWords()" />
+    </div>
   </div>
 </template>
 
@@ -17,14 +20,42 @@
 import AppMenu from '~/components/AppMenu'
 import AppHeader from '~/components/AppHeader'
 import AppFooter from '~/components/AppFooter';
+import Logo from '~/assets/svg/Logo.svg'
 
 export default {
   components: {
     AppMenu,
     AppHeader,
-    AppFooter
+    AppFooter,
+    Logo
   },
   methods: {
+    randomWords() {
+      const words = [
+        'Routing page',
+        'Transfering',
+        'Recieving bytes',
+        'Moving parts',
+        'Peeeow Peeeow',
+        'Zappin!'
+      ]
+
+      const string = words[0 + Math.floor(Math.random() * words.length )]
+      string.split('');
+      let i = 0
+      const length = string.length
+      let text = ''
+
+      for (i; i < length; i++) {
+        if (string[i] === ' ') {
+          text += '&nbsp;'
+        } else {
+          text += '<span class="char inline-block">' + string[i] + '</span>'
+        }
+      }
+
+      return text
+    },
     siteClasses() {
       let grid = ''
 

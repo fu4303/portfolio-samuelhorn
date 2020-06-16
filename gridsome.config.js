@@ -36,6 +36,50 @@ module.exports = {
         typeName: 'Project',
         path: 'content/projects/*.md'
       }
+    },
+    {
+      use: 'gridsome-plugin-pwa',
+      options: {
+        // Service Worker Options
+        disableServiceWorker: false,
+        serviceWorkerPath: 'service-worker.js',
+        cachedFileTypes: 'js,json,css,html,png,jpg,jpeg,svg,gif',
+        disableTemplatedUrls: false,       // Optional
+
+        // Manifest Options (https://developer.mozilla.org/en-US/docs/Web/Manifest)
+        manifestPath: 'manifest.json',
+        title: 'Gridsome',
+        startUrl: '/',
+        display: 'fullscreen',
+        statusBarStyle: 'default',
+        themeColor: '#666600',
+        backgroundColor: '#ffffff',
+        icon: '',
+        shortName: 'Gridsome',              // Optional
+        description: 'Gridsome is awesome!',// Optional
+        categories: ['education'],          // Optional
+        lang: 'en-GB',                      // Optional
+        dir: 'auto',                        // Optional
+        maskableIcon: true,                 // Optional
+        screenshots: [                      // Optional
+          {
+              src: 'src/screenshot1.png',
+              sizes: '1280x720',
+              type: 'image/png',
+          },
+        ],
+        gcmSenderId: undefined,             // Optional
+
+        // Standard Meta Tags
+        svgFavicon: 'favicon.svg',          // Optional. Requires favicon.ico fallback
+
+        // Microsoft Windows Meta Tags
+        msTileColor: '#666600',             // Optional
+
+        // Apple MacOS Meta Tags
+        appleMaskIcon: 'favicon.svg',       // Optional
+        appleMaskIconColor: '#666600',      // Optional
+      }
     }
   ],
 

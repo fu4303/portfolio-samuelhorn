@@ -3,6 +3,10 @@
     <PostHero 
       :post="$page.post"
     />
+    <div 
+      v-html="$page.post.content"
+      class="container markdown max-w-960"
+    />
   </article>
 </template>
 

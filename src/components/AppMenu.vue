@@ -32,13 +32,15 @@ export default {
       const status = this.$store.state.menu
       
       if (status === true) {
-        this.$store.commit('closeMenu')
-        document.getElementById('siteHeader').classList.remove('menu-is-open')
+        setTimeout(() => {
+          this.$store.commit('closeMenu')
+          document.getElementById('siteHeader').classList.remove('menu-is-open')
 
-        gsap.to('.menu-icon', { rotateZ: 0, duration: .25 });
-        gsap.to('.menu-icon__first', { rotateZ: 0, y: 0, duration: .25 });
-        gsap.to('.menu-icon__second', { rotateZ: 0, y: 0, duration: .25 });
-        gsap.to('.menu-icon__third', { opacity: 1, duration: .25 });
+          gsap.to('.menu-icon', { rotateZ: 0, duration: .25 })
+          gsap.to('.menu-icon__first', { rotateZ: 0, y: 0, duration: .25 })
+          gsap.to('.menu-icon__second', { rotateZ: 0, y: 0, duration: .25 })
+          gsap.to('.menu-icon__third', { opacity: 1, duration: .25 })
+        }, 1000)
       }
     }
   }

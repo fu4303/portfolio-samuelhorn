@@ -7,7 +7,7 @@
         Check out Jamdocs
         <Arrow class="w-32 h-32 ml-16" />
       </g-link>
-      <HomeSectionFooter link="All projects" />
+      <HomeSectionFooter link="All projects" path="/projects" />
     </div>
   </section>
 </template>

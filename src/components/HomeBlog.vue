@@ -1,16 +1,16 @@
 <template>
   <section class="mb-64 lg:mb-96 container">
     <HomeSectionHeader title="Latest writings" link="All writings" path="/blog" />
-    <div class="-mx-16 xl:-mx-32 flex flex-col sm:flex-row">
+    <div class="-mx-16 flex flex-col sm:flex-row">
       <div 
         v-for="edge in $page.posts.edges"
         :key="edge.node.id"
-        class="sm:w-1/2 px-16 xl:px-32 flex-shrink-0 mb-32 sm:mb-0 flex"
+        class="sm:w-1/2 px-16 flex-shrink-0 mb-32 sm:mb-0 flex"
       >
         <PostCard :data="edge.node" class="flex-1" />
       </div>
     </div>
-    <HomeSectionFooter link="All writings" />
+    <HomeSectionFooter link="All writings" path="/blog" />
   </section>
 </template>
 

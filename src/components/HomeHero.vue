@@ -8,6 +8,7 @@
         />
         <g-image
           class="object-cover h-full relative mx-auto lg:max-w-896 lg:h-auto xl:max-w-960 xxl:max-w-1200"
+          style="backface-visibility:hidden;"
           src="~/assets/img/me.jpg"
           width="1200"
           alt="Portrait of Samuel Horn af Rantzien smiling"

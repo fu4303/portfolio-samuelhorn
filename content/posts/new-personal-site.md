@@ -40,4 +40,6 @@ My interest for the JAM-stack, SSGs and microservices has really kicked of in th
 
 So, what better way to start this of than building a new site. 
 
-#### This is a ppretty small header
+#### This is a pretty small header
+
+Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.

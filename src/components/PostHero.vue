@@ -49,6 +49,9 @@ export default {
       required: true
     }
   },
+  // mounted() {
+  //   document.getElementById('bgSlide').style.backgroundColor = this.post.color
+  // },
   mixins: [colors]
 }
 </script>

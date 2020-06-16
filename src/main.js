@@ -11,6 +11,30 @@ export default function (Vue, { router, head, isClient, appOptions }) {
 
   Vue.use(Vuex)
 
+
+  // Wait for out transition before scrolling to top
+  router.options.scrollBehavior = function(to, from, savedPosition) {
+    if (to.hash) {
+      const element = document.getElementById(to.hash.slice(1));
+        if (element) {
+            return window.scrollTo({
+                top: element.offsetTop,
+                behavior: 'smooth'
+            });
+        }
+    }
+    
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve({
+          x: 0,
+          y: 0
+        })
+      }, 750)
+    })
+  }
+
+
   head.meta.push({
     name: 'twitter:card',
     content: 'summary_large_image',
@@ -111,5 +135,10 @@ export default function (Vue, { router, head, isClient, appOptions }) {
   head.link.push({
     rel: 'stylesheet',
     href: 'https://use.typekit.net/qfe7lgs.css'
+  })
+
+  head.link.push({
+    rel: 'stylesheet',
+    href: 'https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;670;700&display=swap'
   })
 }

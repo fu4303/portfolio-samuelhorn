@@ -1,0 +1,57 @@
+.markdown {
+  & img {
+    @apply object-cover my-8;
+  }
+
+  & h2 {
+    @apply text-lg mb-32 mt-64 font-semibold;
+  }
+
+  & h3 {
+    @apply text-md mb-16 mt-48 font-semibold;
+  }
+
+  & h4 {
+    @apply text-sm mb-16 mt-32 font-semibold;
+  }
+
+  & p {
+    @apply mb-8;
+  }
+
+  & .intro {
+    @apply text-md mb-8;
+  }
+
+  & blockquote {
+    @apply p-16 font-medium antialiased my-8 text-center;
+
+    & p {
+      @apply text-md m-0;
+    }
+  }
+
+  & pre {
+    @apply my-8;
+  }
+
+  & pre code {
+    @apply block bg-dark p-8;
+  }
+}
+
+@screen md {
+  .markdown {
+    & h2 {
+      @apply text-xl mb-48 mt-128;
+    }
+
+    & h3 {
+      @apply text-lg mb-32 mt-16;
+    }
+
+    & h4 {
+      @apply text-md;
+    }
+  }
+}

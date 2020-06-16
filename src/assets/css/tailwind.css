@@ -2,7 +2,7 @@
 @import "./base";
 @import "tailwindcss/components";
 @import "./components";
-/*@import "./markdown";*/
+@import "./markdown";
 /*@import "./prism";*/
 @import "tailwindcss/utilities";
 
