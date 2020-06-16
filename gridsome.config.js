@@ -44,41 +44,30 @@ module.exports = {
         disableServiceWorker: false,
         serviceWorkerPath: 'service-worker.js',
         cachedFileTypes: 'js,json,css,html,png,jpg,jpeg,svg,gif',
-        disableTemplatedUrls: false,       // Optional
+        disableTemplatedUrls: false,
 
         // Manifest Options (https://developer.mozilla.org/en-US/docs/Web/Manifest)
         manifestPath: 'manifest.json',
-        title: 'Gridsome',
+        title: 'samuelhorn.com',
         startUrl: '/',
         display: 'fullscreen',
         statusBarStyle: 'default',
-        themeColor: '#666600',
+        themeColor: '#1C2024',
         backgroundColor: '#ffffff',
         icon: '',
-        shortName: 'Gridsome',              // Optional
-        description: 'Gridsome is awesome!',// Optional
-        categories: ['education'],          // Optional
-        lang: 'en-GB',                      // Optional
-        dir: 'auto',                        // Optional
-        maskableIcon: true,                 // Optional
-        screenshots: [                      // Optional
-          {
-              src: 'src/screenshot1.png',
-              sizes: '1280x720',
-              type: 'image/png',
-          },
-        ],
-        gcmSenderId: undefined,             // Optional
+        lang: 'en-US',
+        dir: 'auto',
+        maskableIcon: true,
 
         // Standard Meta Tags
         svgFavicon: 'favicon.svg',          // Optional. Requires favicon.ico fallback
 
         // Microsoft Windows Meta Tags
-        msTileColor: '#666600',             // Optional
+        msTileColor: '#1C2024',             // Optional
 
         // Apple MacOS Meta Tags
         appleMaskIcon: 'favicon.svg',       // Optional
-        appleMaskIconColor: '#666600',      // Optional
+        appleMaskIconColor: '#1C2024',      // Optional
       }
     }
   ],
