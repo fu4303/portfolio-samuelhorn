@@ -54,7 +54,7 @@ module.exports = {
         statusBarStyle: 'default',
         themeColor: '#1C2024',
         backgroundColor: '#ffffff',
-        icon: '',
+        icon: 'favicon.svg',
         lang: 'en-US',
         dir: 'auto',
         maskableIcon: true,
