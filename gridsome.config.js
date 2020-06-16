@@ -44,30 +44,27 @@ module.exports = {
         disableServiceWorker: false,
         serviceWorkerPath: 'service-worker.js',
         cachedFileTypes: 'js,json,css,html,png,jpg,jpeg,svg,gif',
-        disableTemplatedUrls: false,
 
         // Manifest Options (https://developer.mozilla.org/en-US/docs/Web/Manifest)
         manifestPath: 'manifest.json',
         title: 'samuelhorn.com',
         startUrl: '/',
-        display: 'fullscreen',
+        display: 'standalone',
         statusBarStyle: 'default',
         themeColor: '#1C2024',
         backgroundColor: '#ffffff',
-        icon: 'favicon.svg',
-        lang: 'en-US',
-        dir: 'auto',
-        maskableIcon: true,
-
-        // Standard Meta Tags
-        svgFavicon: 'favicon.svg',          // Optional. Requires favicon.ico fallback
-
-        // Microsoft Windows Meta Tags
-        msTileColor: '#1C2024',             // Optional
-
-        // Apple MacOS Meta Tags
-        appleMaskIcon: 'favicon.svg',       // Optional
-        appleMaskIconColor: '#1C2024',      // Optional
+        icon: './static/favicon.png',
+        shortName: 'samuelhorn',               // Optional
+        description: 'Web designer & front-end web developer from Sweden who craft smooth experiences with modern web technology, always with characteristic design and performance in focus.',  // Optional
+        categories: ['development'],           // Optional
+        lang: 'en-US',                         // Optional
+        dir: 'auto',                           // Optional
+        maskableIcon: true,                    // Optional
+        gcmSenderId: undefined,                // Optional
+        svgFavicon: './static/favicon.svg',    // Optional. Requires favicon.ico fallback
+        msTileColor: '#1C2024',                // Optional
+        appleMaskIcon: './static/favicon.svg', // Optional
+        appleMaskIconColor: '#1C2024',         // Optional
       }
     }
   ],
