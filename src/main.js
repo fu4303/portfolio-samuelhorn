@@ -142,9 +142,4 @@ export default function (Vue, { router, head, isClient, appOptions }) {
     rel: 'stylesheet',
     href: 'https://use.typekit.net/qfe7lgs.css'
   })
-
-  head.link.push({
-    rel: 'stylesheet',
-    href: 'https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;670;700&display=swap'
-  })
 }
