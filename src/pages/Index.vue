@@ -1,8 +1,8 @@
 <template>
   <div>
     <HomeHero />
-    <HomeBlog :posts="$page.posts" class="relative z-20" />
-    <HomeProject project="jamdocs" />
+    <HomeBlog :posts="$page.posts" class="relative z-20" v-if="isDev" />
+    <HomeProject project="jamdocs" v-if="isDev" />
   </div>
 </template>
 
@@ -16,6 +16,11 @@ export default {
     HomeHero,
     HomeBlog,
     HomeProject
+  },
+  data() {
+    return {
+      isDev: process.env.NODE_ENV === 'development',
+    }
   },
   metaInfo: {
     title: 'Design, thoughts & code for the next web'

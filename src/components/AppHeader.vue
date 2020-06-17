@@ -10,7 +10,7 @@
     <nav id="headerMenu" class="flex items-center grid-bg md:h-64">
       <ToggleGrid />
       <ToggleTheme />
-      <ToggleMenu />
+      <ToggleMenu v-if="isDev" />
     </nav>
   </header>
 </template>
@@ -37,6 +37,11 @@ export default {
     ToggleGrid,
     ToggleTheme,
     ToggleMenu
+  },
+  data() {
+    return {
+      isDev: process.env.NODE_ENV === 'development'
+    }
   },
   mounted() {
     const scrollTrigger = document.querySelector('#belowTheFold')

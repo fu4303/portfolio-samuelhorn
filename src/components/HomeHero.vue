@@ -17,7 +17,8 @@
       <div class="flex flex-col justify-end items-center lg:items-start relative z-10 lg:mt-256">
         <h1 class="text-center text-lg font-semibold max-w-672 sm:text-xl lg:text-xxl lg:text-left xl:text-xxxl xl:max-w-768 grid-bg">Design, thoughts & code for the next web.</h1>
         <p class="mt-32 max-w-672 xl:max-w-896 xl:text-md xl:leading-48 hidden lg:block opacity-75 grid-bg">Im Samuel Horn af Rantzien, a passionate web designer & front-end web developer from Sweden. I craft smooth experiences with modern web technology, always with characteristic design and performance in focus.</p>
-        <Button 
+        <Button
+          v-if="isDev"
           link="/about"
           class="mb-64 mt-32 lg:mt-48"
         >
@@ -40,6 +41,7 @@ export default {
   },
   data() {
     return {
+      isDev: process.env.NODE_ENV === 'development',
       window: {
         width: 0,
         height: 0
