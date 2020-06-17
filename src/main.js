@@ -131,6 +131,12 @@ export default function (Vue, { router, head, isClient, appOptions }) {
     }
   })
 
+  // Touch icon
+  head.link.push({
+    rel: 'apple-touch-icon',
+    href: './assets/static/favicon-192x192.png'
+  })
+
   // Fonts
   head.link.push({
     rel: 'stylesheet',
