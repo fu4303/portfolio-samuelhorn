@@ -132,10 +132,20 @@ export default function (Vue, { router, head, isClient, appOptions }) {
     }
   })
 
-  // Link to Twitter for Webmentions
+  // Webmentions
   head.link.push({
     rel: 'me',
     href: 'https://twitter.com/pixelcrook',
+  });
+
+  head.link.push({
+    rel: 'webmention',
+    href: 'https://webmention.io/samuelhorn.com/webmention',
+  });
+
+  head.link.push({
+    rel: 'pingback',
+    href: 'https://webmention.io/samuelhorn.com/xmlrpc',
   });
 
   // Apple touch icon
