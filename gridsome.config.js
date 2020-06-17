@@ -63,7 +63,7 @@ module.exports = {
         gcmSenderId: undefined,                // Optional
         svgFavicon: './static/favicon.svg',    // Optional. Requires favicon.ico fallback
         msTileColor: '#1C2024',                // Optional
-        appleMaskIcon: './static/favicon.svg', // Optional
+        appleMaskIcon: './static/favicon.png', // Optional
         appleMaskIconColor: '#1C2024',         // Optional
       }
     }
