@@ -9,9 +9,6 @@ export default function (Vue, { router, head, isClient, appOptions }) {
   // Set default layout as a global component
   Vue.component('Layout', DefaultLayout)
 
-  Vue.use(Vuex)
-
-
   // Wait for out transition before scrolling to top
   router.options.scrollBehavior = function(to, from, savedPosition) {
     if (to.hash) {
@@ -34,7 +31,7 @@ export default function (Vue, { router, head, isClient, appOptions }) {
     })
   }
 
-
+  // Twitter cards
   head.meta.push({
     name: 'twitter:card',
     content: 'summary_large_image',
@@ -67,6 +64,7 @@ export default function (Vue, { router, head, isClient, appOptions }) {
     content: 'Web designer & front-end web developer from Sweden who craft smooth experiences with modern web technology, always with characteristic design and performance in focus.',
   })
 
+  // OG tags
   head.meta.push({
     key: 'og:title',
     property: 'og:title',
@@ -97,6 +95,9 @@ export default function (Vue, { router, head, isClient, appOptions }) {
     })
     next()
   })
+
+  // Setup store
+  Vue.use(Vuex)
 
   appOptions.store = new Vuex.Store({
     state: {
@@ -131,7 +132,13 @@ export default function (Vue, { router, head, isClient, appOptions }) {
     }
   })
 
-  // Touch icon
+  // Link to Twitter for Webmentions
+  head.link.push({
+    rel: 'me',
+    href: 'https://twitter.com/pixelcrook',
+  });
+
+  // Apple touch icon
   head.link.push({
     rel: 'apple-touch-icon',
     href: './assets/static/favicon-192x192.png'
