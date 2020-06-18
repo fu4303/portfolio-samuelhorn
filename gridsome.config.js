@@ -38,6 +38,13 @@ module.exports = {
       }
     },
     {
+      use: '@zefman/gridsome-source-webmention',
+      options: {
+        domain: 'samuelhorn.com',
+        token: '2VQkvVX5yue7e4UXfCSR1Q',
+      },
+    },
+    {
       use: 'gridsome-plugin-pwa',
       options: {
         // Service Worker Options
