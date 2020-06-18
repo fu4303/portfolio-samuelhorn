@@ -7,7 +7,7 @@
           style="mix-blend-mode: multiply;"
         />
         <g-image
-          class="object-contain h-full relative mx-auto max-w-full lg:max-w-896 lg:h-auto xl:max-w-960 xxl:max-w-1200"
+          class="object-cover h-full relative mx-auto lg:max-w-896 lg:h-auto xl:max-w-960 xxl:max-w-1200"
           style="backface-visibility:hidden;"
           src="~/assets/img/me.jpg"
           width="1200"

@@ -82,9 +82,9 @@ module.exports = {
         dir: 'auto',                           // Optional
         maskableIcon: true,                    // Optional
         gcmSenderId: undefined,                // Optional
-        svgFavicon: 'static/favicon.svg',    // Optional. Requires favicon.ico fallback
+        svgFavicon: '/favicon.svg',    // Optional. Requires favicon.ico fallback
         msTileColor: '#1C2024',                // Optional
-        appleMaskIcon: 'static/favicon.png', // Optional
+        appleMaskIcon: '/favicon.png', // Optional
         appleMaskIconColor: '#1C2024',         // Optional
       }
     }
