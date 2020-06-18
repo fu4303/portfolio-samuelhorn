@@ -55,7 +55,7 @@ export default function (Vue, { router, head, isClient, appOptions }) {
 
   head.meta.push({
     name: 'twitter:image',
-    content: process.env.GRIDSOME_BASE_PATH + '/share.png',
+    content: 'share.png',
   })
 
   head.meta.push({
@@ -90,7 +90,7 @@ export default function (Vue, { router, head, isClient, appOptions }) {
 
   head.meta.push({
     property: 'og:image',
-    content: process.env.GRIDSOME_BASE_PATH + '/share.png',
+    content: 'share.png',
   })
 
   router.beforeEach((to, _from, next) => {
@@ -157,7 +157,7 @@ export default function (Vue, { router, head, isClient, appOptions }) {
   // Apple touch icon
   head.link.push({
     rel: 'apple-touch-icon',
-    href: './assets/static/favicon-192x192.png'
+    href: 'assets/static/favicon-192x192.png'
   })
 
   // Fonts
