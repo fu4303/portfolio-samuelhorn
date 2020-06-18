@@ -10,18 +10,30 @@
         Tweet this post!
         <Arrow class="w-32 h-32 ml-16" />
       </a>
-      <h2>{{ wmCounts.likes }}</h2>
-      <div v-for="edge in wmLikes" :key="edge.node.wmId">
-        <a :href="edge.node.wmSource" target="_blank" rel="noopener" title="">
-          <img class="w-64 h-64 rounded-full" :src="edge.node.author.photo" :alt="'Twitter profile picture of' + edge.node.author.name" />
-        </a>
+      <div class="flex justify-between w-full max-w-512 mb-64">
+        <div class="mr-32">
+          <h2 class="text-sm font-semibold mb-16">{{ wmCounts.likes }}</h2>
+          <div class="flex">
+            <a class="" v-for="edge in wmLikes" :key="edge.node.wmId" :href="edge.node.wmSource" target="_blank" rel="noopener" title="">
+              <img class="w-64 h-64 rounded-full" :src="edge.node.author.photo" :alt="'Twitter profile picture of' + edge.node.author.name" />
+            </a>
+          </div>
+        </div>
+        <div>
+          <h2 class="text-sm font-semibold mb-16">{{ wmCounts.reposts }}</h2>
+          <div class="flex">
+            <a class="" v-for="edge in wmReposts" :key="edge.node.wmId" :href="edge.node.wmSource" target="_blank" rel="noopener" title="">
+              <img class="w-64 h-64 rounded-full" :src="edge.node.author.photo" :alt="'Twitter profile picture of' + edge.node.author.name" />
+            </a>
+          </div>
+        </div>
       </div>
-      <h2>{{ wmCounts.replies }}</h2>
-      <div v-for="edge in wmReplies" :key="edge.node.wmId">
-        <a :href="edge.node.wmSource" target="_blank" rel="noopener" title="" class="flex">
-          <img class="w-64 h-64 rounded-full" :src="edge.node.author.photo" :alt="'Twitter profile picture of' + edge.node.author.name" />
+      <div class="flex flex-col w-full max-w-512">
+        <h2 class="text-sm font-semibold mb-16">{{ wmCounts.replies }}</h2>
+        <a class="flex mb-32" v-for="edge in wmReplies" :key="edge.node.wmId" :href="edge.node.wmSource" target="_blank" rel="noopener" title="">
+          <img class="w-64 h-64 rounded-full mr-16" :src="edge.node.author.photo" :alt="'Twitter profile picture of' + edge.node.author.name" />
           <div>
-            <h3>{{edge.node.author.name}}</h3>
+            <h3 class="font-medium">{{edge.node.author.name}}</h3>
             {{edge.node.content.text}}
           </div>
         </a>
@@ -67,6 +79,9 @@ export default {
     wmLikes: function () {
       return this.$page.mentions.edges.filter(edge => edge.node.wmProperty === 'like-of')
     },
+    wmReposts: function () {
+      return this.$page.mentions.edges.filter(edge => edge.node.wmProperty === 'repost-of')
+    },
     wmReplies: function () {
       return this.$page.mentions.edges.filter(edge => edge.node.wmProperty === 'mention-of')
     },
@@ -83,6 +98,8 @@ export default {
 
         if (edge.node.wmProperty === 'like-of') {
           wm.likes++
+        } else if (edge.node.wmProperty === 'repost-of') {
+          wm.reposts++
         } else if (edge.node.wmProperty === 'mention-of') {
           wm.replies++
         }
@@ -98,6 +115,12 @@ export default {
         wm.likes = wm.likes + ' Like'
       } else {
         wm.likes = wm.likes + ' Likes'
+      }
+
+      if (wm.reposts === 1) {
+        wm.reposts = wm.reposts + ' Repost'
+      } else {
+        wm.reposts = wm.reposts + ' Reposts'
       }
 
       if (wm.replies === 1) {
