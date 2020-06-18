@@ -12,6 +12,7 @@
     "@gridsome/transformer-remark": "^0.6.0",
     "@zefman/gridsome-source-webmention": "^0.1.4",
     "gridsome": "^0.7.0",
+    "gridsome-plugin-feed": "^1.0.2",
     "gridsome-plugin-pwa": "^0.0.18",
     "gsap": "^3.2.6",
     "postcss-import": "^12.0.1",

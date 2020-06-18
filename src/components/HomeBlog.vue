@@ -1,6 +1,6 @@
 <template>
   <section class="mb-64 lg:mb-96 container">
-    <HomeSectionHeader title="Latest writings" link="All writings" path="/blog" />
+    <SectionHeader title="Latest writings" link="All writings" path="/blog" />
     <div class="-mx-16 flex flex-col sm:flex-row">
       <div 
         v-for="edge in $page.posts.edges"
@@ -10,20 +10,20 @@
         <PostCard :data="edge.node" class="flex-1" />
       </div>
     </div>
-    <HomeSectionFooter link="All writings" path="/blog" />
+    <SectionFooter link="All writings" path="/blog" />
   </section>
 </template>
 
 <script>
 import PostCard from '~/components/PostCard.vue'
-import HomeSectionHeader from '~/components/HomeSectionHeader'
-import HomeSectionFooter from '~/components/HomeSectionFooter'
+import SectionHeader from '~/components/SectionHeader'
+import SectionFooter from '~/components/SectionFooter'
 
 export default {
   components: {
     PostCard,
-    HomeSectionHeader,
-    HomeSectionFooter
+    SectionHeader,
+    SectionFooter
   },
   props: {
     posts: {

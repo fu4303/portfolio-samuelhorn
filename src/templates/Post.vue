@@ -5,98 +5,27 @@
     />
     <div 
       v-html="$page.post.content"
-      class="container markdown max-w-960"
+      class="container markdown max-w-960 mb-64"
     />
-    <div>
-      <h2>{{ wmCounts.responses }}</h2>
-      <h2>{{ wmCounts.likes }}</h2>
-      <div v-for="edge in wmLikes" :key="edge.node.wmId">
-        <a :href="edge.node.wmSource" target="_blank" rel="noopener" title="">
-          <img class="w-64 h-64 rounded-full" :src="edge.node.author.photo" :alt="'Twitter profile picture of' + edge.node.author.name" />
-        </a>
-      </div>
-      <h2>{{ wmCounts.replies }}</h2>
-      <div v-for="edge in wmReplies" :key="edge.node.wmId">
-        <a :href="edge.node.wmSource" target="_blank" rel="noopener" title="" class="flex">
-          <img class="w-64 h-64 rounded-full" :src="edge.node.author.photo" :alt="'Twitter profile picture of' + edge.node.author.name" />
-          <div>
-            <h3>{{edge.node.author.name}}</h3>
-            {{edge.node.content.text}}
-          </div>
-        </a>
-      </div>
-    </div>
+    <PostMentions :mentions="$page.mentions" :url="$page.post.path" :title="$page.post.title" />
   </article>
 </template>
 
 <script>
 import PostHero from '~/components/PostHero.vue'
+import PostMentions from '~/components/PostMentions.vue'
 import colors from '../mixins/colors'
 
 export default {
   components: {
-    PostHero
-  },
-  data() {
-    return {
-      wmCounts: {
-        responses: 0,
-        likes: 0,
-        reposts: 0,
-        replies: 0
-      }
-    }
+    PostHero,
+    PostMentions
   },
   mixins: [colors],
-  computed: {
-    wmLikes: function () {
-      return this.$page.mentions.edges.filter(edge => edge.node.wmProperty === 'like-of')
-    },
-    wmReplies: function () {
-      return this.$page.mentions.edges.filter(edge => edge.node.wmProperty === 'mention-of')
-    }
-  },
-  methods: {
-    webMentions() {
-      let wm = this.wmCounts
-
-      this.$page.mentions.edges.forEach(edge => {
-        wm.responses++
-
-        if (edge.node.wmProperty === 'like-of') {
-          wm.likes++
-        } else if (edge.node.wmProperty === 'mention-of') {
-          wm.replies++
-        }
-      })
-
-      if (wm.responses === 1) {
-        wm.responses = wm.responses + ' Response'
-      } else {
-        wm.responses = wm.responses + ' Responses'
-      }
-
-      if (wm.likes === 1) {
-        wm.likes = wm.likes + ' Like'
-      } else {
-        wm.likes = wm.likes + ' Likes'
-      }
-
-      if (wm.replies === 1) {
-        wm.replies = wm.replies + ' Reply'
-      } else {
-        wm.replies = wm.replies + ' Replies'
-      }
-
-      
-    }
-  },
   mounted() {
     const color = this.$page.post.color
     const theme = this.$store.state.theme
     const header = document.getElementById('siteHeader')
-
-    this.webMentions()
 
     if (color !== '') {
       this.$store.commit('setPostColor', color)

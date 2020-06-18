@@ -165,4 +165,11 @@ export default function (Vue, { router, head, isClient, appOptions }) {
     rel: 'stylesheet',
     href: 'https://use.typekit.net/qfe7lgs.css'
   })
+
+  // Feed
+  head.link.push({
+    rel: 'feed',
+    type: 'text/html',
+    href: process.env.GRIDSOME_BASE_PATH + '/feed.xml'
+  })
 }

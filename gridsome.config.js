@@ -9,6 +9,7 @@ const postcssConfig = require('./postcss.config.js')
 module.exports = {
   siteName: 'samuelhorn.com',
   siteDescription: 'Web designer & front-end web developer from Sweden who craft smooth experiences with modern web technology, always with characteristic design and performance in focus.',
+  siteUrl: process.env.GRIDSOME_BASE_PATH,
 
   templates: {
     Project: '/projects/:title',
@@ -43,6 +44,19 @@ module.exports = {
         domain: 'samuelhorn.com',
         token: '2VQkvVX5yue7e4UXfCSR1Q',
       },
+    },
+    {
+      use: 'gridsome-plugin-feed',
+      options: {
+        contentTypes: ['Post'],
+        feedOptions: {
+          title: 'Samuel Horn Feed'
+        },
+        rss: {
+          enabled: true,
+          output: '/feed.xml'
+        }
+      }
     },
     {
       use: 'gridsome-plugin-pwa',
