@@ -60,7 +60,7 @@ module.exports = {
         statusBarStyle: 'default',
         themeColor: '#1C2024',
         backgroundColor: '#ffffff',
-        icon: './static/favicon.png',
+        icon: 'favicon.png',
         shortName: 'samuelhorn',               // Optional
         description: 'Web designer & front-end web developer from Sweden who craft smooth experiences with modern web technology, always with characteristic design and performance in focus.',  // Optional
         categories: ['development'],           // Optional
@@ -68,9 +68,9 @@ module.exports = {
         dir: 'auto',                           // Optional
         maskableIcon: true,                    // Optional
         gcmSenderId: undefined,                // Optional
-        svgFavicon: './static/favicon.svg',    // Optional. Requires favicon.ico fallback
+        svgFavicon: 'favicon.svg',    // Optional. Requires favicon.ico fallback
         msTileColor: '#1C2024',                // Optional
-        appleMaskIcon: './static/favicon.png', // Optional
+        appleMaskIcon: 'favicon.png', // Optional
         appleMaskIconColor: '#1C2024',         // Optional
       }
     }
