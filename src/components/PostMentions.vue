@@ -11,7 +11,7 @@
         <Arrow class="w-32 h-32 ml-16" />
       </a>
       <div class="flex justify-between w-full max-w-512 mb-64">
-        <div class="mr-32">
+        <div v-if="wmCounts.likes != '0 Likes'" class="mr-32">
           <h2 class="text-sm font-semibold mb-16">{{ wmCounts.likes }}</h2>
           <div class="flex">
             <a class="" v-for="edge in wmLikes" :key="edge.node.wmId" :href="edge.node.wmSource" target="_blank" rel="noopener" title="">
@@ -19,7 +19,7 @@
             </a>
           </div>
         </div>
-        <div>
+        <div v-if="wmCounts.reposts != '0 Reposts'">
           <h2 class="text-sm font-semibold mb-16">{{ wmCounts.reposts }}</h2>
           <div class="flex">
             <a class="" v-for="edge in wmReposts" :key="edge.node.wmId" :href="edge.node.wmSource" target="_blank" rel="noopener" title="">
@@ -28,7 +28,7 @@
           </div>
         </div>
       </div>
-      <div class="flex flex-col w-full max-w-512">
+      <div v-if="wmCounts.replies != '0 Replies'" class="flex flex-col w-full max-w-512">
         <h2 class="text-sm font-semibold mb-16">{{ wmCounts.replies }}</h2>
         <a class="flex mb-32" v-for="edge in wmReplies" :key="edge.node.wmId" :href="edge.node.wmSource" target="_blank" rel="noopener" title="">
           <img class="w-64 h-64 rounded-full mr-16" :src="edge.node.author.photo" :alt="'Twitter profile picture of' + edge.node.author.name" />
@@ -68,7 +68,7 @@ export default {
   data() {
     return {
       wmCounts: {
-        interactions: '',
+        interactions: '0',
         likes: 0,
         reposts: 0,
         replies: 0

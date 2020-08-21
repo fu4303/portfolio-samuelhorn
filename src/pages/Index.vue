@@ -2,7 +2,8 @@
   <div>
     <HomeHero />
     <HomeBlog :posts="$page.posts" class="relative z-20" v-if="isDev" />
-    <HomeProject project="jamdocs" v-if="isDev" />
+    <HomeProject :project="$page.project" v-if="isDev" />
+    
   </div>
 </template>
 
@@ -47,6 +48,11 @@ query {
         }
       }
     }
+  }
+  project(path: "/projects/tailbase") {
+    name
+    title
+    demo
   }
 }
 </page-query>

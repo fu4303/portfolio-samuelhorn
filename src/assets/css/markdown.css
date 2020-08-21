@@ -8,19 +8,15 @@
   }
 
   & h3 {
-    @apply text-md mb-16 mt-48 font-semibold;
-  }
-
-  & h4 {
-    @apply text-sm mb-16 mt-32 font-semibold;
+    @apply text-sm mb-16 mt-48 font-semibold;
   }
 
   & p {
-    @apply mb-8;
+    @apply mb-32;
   }
 
   & .intro {
-    @apply text-md mb-8;
+    @apply text-md mb-32;
   }
 
   & blockquote {
@@ -38,20 +34,36 @@
   & pre code {
     @apply block bg-dark p-8;
   }
+
+  & a {
+    @apply text-brand;
+
+    &:hover {
+      @apply text-brand-light;
+    }
+  }
 }
 
 @screen md {
   .markdown {
     & h2 {
-      @apply text-xl mb-48 mt-128;
+      @apply text-xl mb-48 mt-64;
+
+      &:first-child {
+        @apply mt-96;
+      }
     }
 
     & h3 {
-      @apply text-lg mb-32 mt-16;
+      @apply text-md mb-32 mt-48;
     }
+  }
+}
 
-    & h4 {
-      @apply text-md;
-    }
+.grid-lines .markdown {
+  & h2,
+  & h3,
+  & p {
+    background: var(--complementary-10);
   }
 }

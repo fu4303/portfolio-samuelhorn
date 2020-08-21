@@ -1,6 +1,6 @@
 <template>
   <section class="mb-64 lg:mb-96 container">
-    <SectionHeader title="Latest writings" link="All writings" path="/blog" />
+    <SectionHeader title="Latest writings" link="All writings" path="/blog/" />
     <div class="-mx-16 flex flex-col sm:flex-row">
       <div 
         v-for="edge in $page.posts.edges"

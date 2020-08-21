@@ -14,6 +14,7 @@
       <nav class="flex flex-col items-center text-lg">
         <AppMenuLink to="/">Home</AppMenuLink>
         <AppMenuLink to="/blog">Blog</AppMenuLink>
+        <AppMenuLink to="/projects">Projects</AppMenuLink>
       </nav>
     </div>
   </transition>

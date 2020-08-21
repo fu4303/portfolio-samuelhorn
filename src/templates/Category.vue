@@ -1,13 +1,13 @@
 <template>
   <div>
     <div class="container">
-      <h1 class="mt-192 xl:mt-256 mb-64 text-center text-lg font-semibold max-w-672 sm:text-xl lg:text-xxl lg:text-left xl:text-xxxl xl:max-w-768 grid-bg">The blog</h1>
+      <h1 class="mt-192 xl:mt-256 mb-64 text-center text-lg font-semibold max-w-672 sm:text-xl lg:text-xxl lg:text-left xl:text-xxxl xl:max-w-768 grid-bg">{{ $page.category.title }} writings</h1>
     </div>
 
     <section class="mb-64 lg:mb-96 container">
       <div class="-mx-16 flex flex-col sm:flex-row sm:flex-wrap">
         <div 
-          v-for="edge in $page.posts.edges"
+          v-for="edge in $page.category.belongsTo.edges"
           :key="edge.node.id"
           class="sm:w-1/2 px-16 flex-shrink-0 mb-32 flex"
         >
@@ -44,21 +44,27 @@ export default {
 </script>
 
 <page-query>
-query {
-  posts: allPost(filter: { published: { eq: true }}) {
-    edges {
-      node {
-        id
-        title
-        date (format: "D. MMMM YYYY")
-        timeToRead
-        description
-        color
-        path
-        category {
-          id
-          title
-          path
+
+query Category ($id: ID!) {
+  category (id: $id) {
+    title
+    belongsTo {
+      edges {
+        node {
+          ...on Post {
+            id
+            title
+            date (format: "D. MMMM YYYY")
+            timeToRead
+            description
+            color
+            path
+            category {
+              id
+              title
+              path
+            }
+          }
         }
       }
     }

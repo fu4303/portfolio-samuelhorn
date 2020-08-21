@@ -22,6 +22,7 @@ module.exports = {
     },
     spacing: {
       '0': '0',
+      '2': '2px',
       '6': '.375rem',
       '8': '.5rem',
       '10': '.625rem',
@@ -92,6 +93,8 @@ module.exports = {
     colors: {
       'light': '#ffffff',
       'dark': '#1C2024',
+      'brand': '#e63946',
+      'brand-light': '#FE828B',
       'transparent': 'transparent',
       'primary': 'var(--primary)',
       'seconday': 'var(--seconday)',

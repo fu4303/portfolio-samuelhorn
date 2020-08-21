@@ -4,8 +4,8 @@
     :style="bgColor(this.post.color)"
     :class="fgColor(this.post.color)"
   >
-    <div class="container lg:min-h-screen flex flex-col items-center lg:items-start justify-center py-192 relative">
-      <h1 class="text-center text-lg font-semibold max-w-768 sm:text-xl lg:text-xxl lg:text-left xl:text-xxxl xl:max-w-896 grid-bg">{{ post.title }}</h1>
+    <div :style="setHeroHeight()" class="container flex flex-col items-center lg:items-start justify-center py-192 relative">
+      <h1 class="text-center text-lg font-semibold max-w-768 sm:text-xl lg:text-xxl lg:text-left xl:text-xxxl xl:max-w-896">{{ post.title }}</h1>
       <Button 
         link="#belowTheFold" 
         class="mt-32 lg:mt-48"
@@ -52,6 +52,30 @@ export default {
   // mounted() {
   //   document.getElementById('bgSlide').style.backgroundColor = this.post.color
   // },
-  mixins: [colors]
+  mixins: [colors],
+  methods: {
+    isOdd(num) {
+      return num % 2
+    },
+    setHeroHeight() {
+      if (process.isClient) {
+        const screenHeight = window.innerHeight
+
+        const screenHeightDiv = screenHeight / 16
+        const screenHeightUneven = screenHeightDiv % 1 != 0
+        let newHeight = screenHeight
+
+        if (screenHeightUneven) {
+          newHeight = Math.ceil(screenHeightDiv) * 16
+        }
+        
+        if (screenHeight > 800) {
+          return 'height:'+newHeight+'px'
+        } else {
+          return
+        }
+      }
+    }
+  }
 }
 </script>

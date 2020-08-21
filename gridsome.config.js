@@ -12,7 +12,7 @@ module.exports = {
   siteUrl: process.env.GRIDSOME_BASE_PATH,
 
   templates: {
-    Project: '/projects/:title',
+    Project: '/projects/:name',
     Post: '/:title',
     Category: '/category/:id'
   },
@@ -22,7 +22,7 @@ module.exports = {
       use: '@gridsome/source-filesystem',
       options: {
         typeName: 'Post',
-        path: 'content/posts/*.md',
+        path: 'src/content/posts/*.md',
         refs: {
           category: {
             typeName: 'Category',
@@ -35,7 +35,7 @@ module.exports = {
       use: '@gridsome/source-filesystem',
       options: {
         typeName: 'Project',
-        path: 'content/projects/*.md'
+        path: 'src/content/projects/*.md'
       }
     },
     {
@@ -96,7 +96,8 @@ module.exports = {
       externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
       anchorClassName: 'icon icon-link',
       plugins: [
-        '@gridsome/remark-prismjs'
+        '@gridsome/remark-prismjs',
+        'gridsome-plugin-remark-youtube'
       ]
     }
   },

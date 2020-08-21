@@ -3,7 +3,7 @@
     v-if="!anchor"
     :to="link" 
     :class="hoverColor(theme)"
-    class="button flex h-64 px-48 pt-14 pb-18 font-normal text-xs border-2 rounded-full transition-colors duration-200 grid-bg"
+    class="button flex h-64 px-48 pt-14 pb-18 font-normal text-xs border-2 rounded-full transition-colors duration-200"
   >
     <slot/>
   </g-link>
@@ -11,7 +11,7 @@
     v-else
     :href="link" 
     :class="hoverColor(theme)"
-    class="button flex h-64 px-48 pt-14 pb-18 font-normal text-xs border-2 rounded-full transition-colors duration-200 grid-bg"
+    class="button flex h-64 px-48 pt-14 pb-18 font-normal text-xs border-2 rounded-full transition-colors duration-200"
   >
     <slot/>
   </a>

@@ -31,12 +31,6 @@ export default function (Vue, { router, head, isClient, appOptions }) {
     })
   }
 
-  // DONT INDEX NOW
-  head.meta.push({
-    name: 'robots',
-    content: 'noindex',
-  })
-
   // Twitter cards
   head.meta.push({
     name: 'twitter:card',
