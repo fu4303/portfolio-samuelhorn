@@ -5,7 +5,7 @@
     :class="fgColor(this.post.color)"
   >
     <div :style="setHeroHeight()" class="container flex flex-col items-center lg:items-start justify-center py-192 relative">
-      <h1 class="text-center text-lg font-semibold max-w-768 sm:text-xl lg:text-xxl lg:text-left xl:text-xxxl xl:max-w-896">{{ post.title }}</h1>
+      <h1 class="p-name text-center text-lg font-semibold max-w-768 sm:text-xl lg:text-xxl lg:text-left xl:text-xxxl xl:max-w-896">{{ post.title }}</h1>
       <Button 
         link="#belowTheFold" 
         class="mt-32 lg:mt-48"
@@ -18,7 +18,9 @@
       <div class="absolute right-0 left-0 bottom-0 flex justify-between mb-32 lg:mb-96 mx-32 lg:mx-96 xxl:mx-192">
         <div>
           <span class="caption block opacity-50">Posted</span>
-          {{ post.date }}
+          <time class="dt-published" :datetime="post.date">
+            {{ new Date(post.date).getFullYear() + ' / ' + new Date(post.date).getMonth() + ' / ' + new Date(post.date).getDate() }}
+          </time>
         </div>
         <div>
           <span class="caption block opacity-50">Category</span>

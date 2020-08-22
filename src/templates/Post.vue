@@ -1,11 +1,11 @@
 <template>
-  <article>
+  <article class="h-entry">
     <PostHero 
       :post="$page.post"
     />
     <div 
       v-html="$page.post.content"
-      class="container markdown max-w-960 mb-64"
+      class="e-content container markdown max-w-960 mb-64"
     />
     <!--PostMentions :mentions="$page.mentions" :url="$page.post.path" :title="$page.post.title" /-->
   </article>
@@ -96,7 +96,7 @@ query Post ($id: ID!) {
   post: post (id: $id) {
     title
     path
-    date (format: "D / MM / YY")
+    date (format: "Y-MM-D hh:mm:ss")
     timeToRead
     color
     category {
