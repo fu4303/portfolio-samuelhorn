@@ -1,8 +1,8 @@
 <template>
   <div>
     <HomeHero />
-    <HomeBlog :posts="$page.posts" class="relative z-20" v-if="isDev" />
-    <HomeProject :project="$page.project" v-if="isDev" />
+    <HomeBlog :posts="$page.posts" class="relative z-20" />
+    <HomeProject :project="$page.project" />
     
   </div>
 </template>
