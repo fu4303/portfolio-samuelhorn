@@ -49,7 +49,7 @@ export default function (Vue, { router, head, isClient, appOptions }) {
 
   head.meta.push({
     name: 'twitter:image',
-    content: 'share.png',
+    content: 'https://samuelhorn.com/share.png',
   })
 
   head.meta.push({
