@@ -19,6 +19,12 @@ module.exports = {
 
   plugins: [
     {
+      use: '@gridsome/plugin-google-analytics',
+      options: {
+        id: (process.env.GA_ID ? process.env.GA_ID : 'XX-999999999-9')
+      }
+    },
+    {
       use: '@gridsome/source-filesystem',
       options: {
         typeName: 'Post',
@@ -42,7 +48,7 @@ module.exports = {
       use: '@zefman/gridsome-source-webmention',
       options: {
         domain: 'samuelhorn.com',
-        token: '2VQkvVX5yue7e4UXfCSR1Q',
+        token: (process.env.WM_TOKEN ? process.env.WM_TOKEN : '')
       },
     },
     {
