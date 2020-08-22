@@ -10,7 +10,7 @@
     <nav id="headerMenu" class="flex items-center grid-bg md:h-64">
       <ToggleGrid />
       <ToggleTheme />
-      <ToggleMenu v-if="isDev" />
+      <ToggleMenu />
     </nav>
   </header>
 </template>
