@@ -19,7 +19,7 @@
         <div>
           <span class="caption block opacity-50">Posted</span>
           <time class="dt-published" :datetime="post.date">
-            {{ new Date(post.date).getFullYear() + ' / ' + new Date(post.date).getMonth() + ' / ' + new Date(post.date).getDate() }}
+            {{ post.date }}
           </time>
         </div>
         <div>

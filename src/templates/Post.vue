@@ -96,7 +96,7 @@ query Post ($id: ID!, $path: String!) {
   post: post (id: $id) {
     title
     path
-    date (format: "Y-MM-D hh:mm:ss")
+    date (format: "Y / MM / D")
     timeToRead
     color
     category {
