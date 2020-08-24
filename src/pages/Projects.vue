@@ -35,6 +35,21 @@ export default {
   components: {
     Button,
     Arrow
+  },
+  metaInfo: {
+    title: 'My projects',
+    meta: [
+      {
+        key: 'og:title',
+        property: 'og:title',
+        content: 'My projects',
+      },
+      {
+        key: 'twitter:title',
+        name: 'twitter:title',
+        content: 'My projects',
+      },
+    ]
   }
 }
 </script>
