@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="container">
-      <h1 class="mt-192 xl:mt-256 mb-64 text-center text-lg font-semibold max-w-672 sm:text-xl lg:text-xxl lg:text-left xl:text-xxxl xl:max-w-768 grid-bg">{{ $page.category.title }} writings</h1>
+      <h1 class="mt-192 xl:mt-256 mb-64 text-center text-lg font-semibold max-w-672 sm:text-xl lg:text-xxl lg:text-left xl:text-xxxl xl:max-w-768 grid-bg"><span class="capitalize">{{ $page.category.title }}</span> writings</h1>
     </div>
 
     <section class="mb-64 lg:mb-96 container">
@@ -25,20 +25,22 @@ export default {
   components: {
     PostCard
   },
-  metaInfo: {
-    title: 'My writings',
-    meta: [
-      {
-        key: 'og:title',
-        property: 'og:title',
-        content: 'My writings',
-      },
-      {
-        key: 'twitter:title',
-        name: 'twitter:title',
-        content: 'My writings',
-      },
-    ]
+  metaInfo() {
+    return {
+      title: this.$page.category.title.charAt(0).toUpperCase() + this.$page.category.title.slice(1) + ' writings',
+      meta: [
+        {
+          key: 'og:title',
+          property: 'og:title',
+          content: this.$page.category.title.charAt(0).toUpperCase() + this.$page.category.title.slice(1) + ' writings'
+        },
+        {
+          key: 'twitter:title',
+          name: 'twitter:title',
+          content: this.$page.category.title.charAt(0).toUpperCase() + this.$page.category.title.slice(1) + ' writings'
+        },
+      ],
+    }
   }
 }
 </script>
