@@ -1,7 +1,9 @@
 <template>
   <div>
     <div class="container">
-      <h1 class="mt-192 xl:mt-256 mb-64 text-center text-lg font-semibold max-w-672 sm:text-xl lg:text-xxl lg:text-left xl:text-xxxl xl:max-w-768 grid-bg"><span class="capitalize">{{ $page.category.title }}</span> writings</h1>
+      <h1 class="mt-192 xl:mt-256 mb-64 text-center text-lg font-semibold max-w-672 sm:text-xl lg:text-xxl lg:text-left xl:text-xxxl xl:max-w-768 grid-bg">
+        {{ $page.category.title.charAt(0).toUpperCase() + $page.category.title.slice(1) + ' writings' }}
+      </h1>
     </div>
 
     <section class="mb-64 lg:mb-96 container">
