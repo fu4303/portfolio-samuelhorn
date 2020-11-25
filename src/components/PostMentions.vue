@@ -10,19 +10,19 @@
         Tweet this post!
         <Arrow class="w-32 h-32 ml-16" />
       </a>
-      <div class="flex justify-between w-full max-w-512 mb-64">
-        <div v-if="wmCounts.likes != '0 Likes'" class="mr-32">
+      <div class="flex justify-center w-full mb-64 flex-wrap">
+        <div v-if="wmCounts.likes != '0 Likes'" class="mr-32 mb-32">
           <h2 class="text-sm font-semibold mb-16">{{ wmCounts.likes }}</h2>
-          <div class="flex">
-            <a class="" v-for="edge in wmLikes" :key="edge.node.wmId" :href="edge.node.wmSource" target="_blank" rel="noopener" title="">
+          <div class="flex flex-wrap pl-16">
+            <a class="flex-shrink-0 -ml-16" v-for="edge in wmLikes" :key="edge.node.wmId" :href="edge.node.wmSource" target="_blank" rel="noopener" title="">
               <img class="w-64 h-64 rounded-full" :src="edge.node.author.photo" :alt="'Twitter profile picture of' + edge.node.author.name" />
             </a>
           </div>
         </div>
-        <div v-if="wmCounts.reposts != '0 Reposts'">
+        <div v-if="wmCounts.reposts != '0 Reposts'" class="mb-32">
           <h2 class="text-sm font-semibold mb-16">{{ wmCounts.reposts }}</h2>
-          <div class="flex">
-            <a class="" v-for="edge in wmReposts" :key="edge.node.wmId" :href="edge.node.wmSource" target="_blank" rel="noopener" title="">
+          <div class="flex flex-wrap pl-16">
+            <a class="flex-shrink-0 -ml-16" v-for="edge in wmReposts" :key="edge.node.wmId" :href="edge.node.wmSource" target="_blank" rel="noopener" title="">
               <img class="w-64 h-64 rounded-full" :src="edge.node.author.photo" :alt="'Twitter profile picture of' + edge.node.author.name" />
             </a>
           </div>
