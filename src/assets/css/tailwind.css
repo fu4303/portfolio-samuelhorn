@@ -3,7 +3,7 @@
 @import "tailwindcss/components";
 @import "./components";
 @import "./markdown";
-/*@import "./prism";*/
+@import "./prism";
 @import "tailwindcss/utilities";
 
 :root {

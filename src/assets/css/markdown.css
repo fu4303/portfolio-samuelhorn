@@ -32,7 +32,7 @@
   }
 
   & pre code {
-    @apply block bg-dark p-8;
+    @apply block p-8;
   }
 
   & a {
