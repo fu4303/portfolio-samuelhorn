@@ -23,8 +23,41 @@ export default {
       isDev: process.env.NODE_ENV === 'development',
     }
   },
-  metaInfo: {
-    title: 'Design, thoughts & code for the next web'
+  metaInfo () {
+    return {
+      title: 'Design, thoughts & code for the next web',
+      meta: [
+        {
+          key: 'twitter:image',
+          name: 'twitter:image',
+          content: 'share.png',
+        },
+        {
+          key: 'twitter:title',
+          name: 'twitter:title',
+          content: 'Design, thoughts & code for the next web',
+        },
+        {
+          key: 'twitter:description',
+          name: 'twitter:description',
+          content: 'Web designer & front-end web developer from Sweden who craft smooth experiences with modern web technology, always with characteristic design and performance in focus.',
+        },
+        {
+          property: 'og:image',
+          content: 'share.png',
+        },
+        {
+          key: 'og:title',
+          property: 'og:title',
+          content: 'Design, thoughts & code for the next web',
+        },
+        {
+          key: 'og:description',
+          property: 'og:description',
+          content: 'Web designer & front-end web developer from Sweden who craft smooth experiences with modern web technology, always with characteristic design and performance in focus.',
+        }
+      ]
+    }
   }
 }
 </script>

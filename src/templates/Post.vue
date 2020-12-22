@@ -85,6 +85,15 @@ export default {
           name: 'twitter:description',
           content: this.$page.post.description,
         },
+        {
+          key: 'twitter:image',
+          name: 'twitter:image',
+          content: 'https://samuelhorn.com'+ this.$page.post.path.replace(/\/$/, "") +'.png',
+        },
+        {
+          property: 'og:image',
+          content: 'https://samuelhorn.com'+ this.$page.post.path.replace(/\/$/, "") +'.png',
+        },
       ]
     }
   }

@@ -5,7 +5,7 @@ published: true
 category: 'web'
 canonical_url: false
 description: 'So, after a couple of months without writing on wpahead.com Im finally ready with my new site.'
-color: '#f1faee'
+color: '#C7304B'
 ---
 
 ## Wow, nice to finally be up and running again

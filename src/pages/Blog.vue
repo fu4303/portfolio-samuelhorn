@@ -38,6 +38,25 @@ export default {
         name: 'twitter:title',
         content: 'My writings',
       },
+      {
+        key: 'twitter:description',
+        name: 'twitter:description',
+        content: 'Web designer & front-end web developer from Sweden who craft smooth experiences with modern web technology, always with characteristic design and performance in focus.',
+      },
+      {
+        key: 'og:description',
+        property: 'og:description',
+        content: 'Web designer & front-end web developer from Sweden who craft smooth experiences with modern web technology, always with characteristic design and performance in focus.',
+      },
+      {
+        property: 'og:image',
+        content: 'share.png',
+      },
+      {
+        key: 'twitter:image',
+        name: 'twitter:image',
+        content: 'share.png',
+      }
     ]
   }
 }
