@@ -60,6 +60,7 @@ export default {
         content: 'Web designer & front-end web developer from Sweden who craft smooth experiences with modern web technology, always with characteristic design and performance in focus.',
       },
       {
+        key: 'og:image',
         property: 'og:image',
         content: 'share.png',
       },
