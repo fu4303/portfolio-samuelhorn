@@ -5,6 +5,7 @@ published: true
 category: 'typography'
 canonical_url: false
 description: "Typographic hierarchy and vertical rhythm are super important. If you use tailwind, I have made it easier to set up a good foundation by building a generator that I call Tailbase. It's totally free to use and it's open-source."
+color: '#009FBA'
 ---
 
 ## TLDR
