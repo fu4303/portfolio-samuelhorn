@@ -54,12 +54,17 @@ export default {
         {
           key: 'og:image',
           property: 'og:image',
-          content: 'share.png',
+          content: 'https://samuelhorn.com/share.png',
         },
         {
           key: 'twitter:image',
           name: 'twitter:image',
-          content: 'share.png',
+          content: 'https://samuelhorn.com/share.png',
+        },
+        {
+          key: 'og:url',
+          property: 'og:url',
+          content: 'https://samuelhorn.com/category/'+ this.$page.category.title
         }
       ],
     }

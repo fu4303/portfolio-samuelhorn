@@ -95,6 +95,11 @@ export default {
           property: 'og:image',
           content: 'https://samuelhorn.com'+ this.$page.post.path.replace(/\/$/, "") +'.png',
         },
+        {
+          key: 'og:url',
+          property: 'og:url',
+          content: 'https://samuelhorn.com'+ this.$page.post.path
+        }
       ]
     }
   }
