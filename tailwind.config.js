@@ -100,10 +100,16 @@ module.exports = {
       'seconday': 'var(--seconday)',
       'complementary': 'var(--complementary)',
       'complementary-5': 'var(--complementary-5)',
+      'complementary-5-solid': 'var(--complementary-5-solid)',
       'complementary-10': 'var(--complementary-10)'
     },
     extend: {
-
+      borderWidth: {
+        thick: '6px'
+      },
+      boxShadow: {
+        avatarBorder: '0 0 0 5px var(--complementary-5), 0 0 0 5px var(--seconday)'
+      }
     }
   },
   variants: {

@@ -13,6 +13,7 @@
   --complementary-5: rgba(27,28,31,0.05);
   --complementary-10: rgba(27,28,31,0.1);
   --complementary-25: rgba(27,28,31,0.25);
+  --complementary-5-solid: #E0E4E8;
 }
 
 .dark-mode {
@@ -22,4 +23,5 @@
   --complementary-5: rgba(255,255,255,0.05);
   --complementary-10: rgba(255,255,255,0.1);
   --complementary-25: rgba(255,255,255,0.25);
+  --complementary-5-solid: #383F4B;
 }

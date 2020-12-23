@@ -15,7 +15,7 @@
           <h2 class="text-sm font-semibold mb-16">{{ wmCounts.likes }}</h2>
           <div class="flex flex-wrap pl-16">
             <a class="flex-shrink-0 -ml-16" v-for="edge in wmLikes" :key="edge.node.wmId" :href="edge.node.wmSource" target="_blank" rel="noopener" title="">
-              <img class="w-64 h-64 rounded-full" :src="edge.node.author.photo" :alt="'Twitter profile picture of' + edge.node.author.name" />
+              <img class="w-64 h-64 rounded-full shadow-avatarBorder" :src="edge.node.author.photo" :alt="'Twitter profile picture of' + edge.node.author.name" />
             </a>
           </div>
         </div>
@@ -23,7 +23,7 @@
           <h2 class="text-sm font-semibold mb-16">{{ wmCounts.reposts }}</h2>
           <div class="flex flex-wrap pl-16">
             <a class="flex-shrink-0 -ml-16" v-for="edge in wmReposts" :key="edge.node.wmId" :href="edge.node.wmSource" target="_blank" rel="noopener" title="">
-              <img class="w-64 h-64 rounded-full" :src="edge.node.author.photo" :alt="'Twitter profile picture of' + edge.node.author.name" />
+              <img class="w-64 h-64 rounded-full shadow-avatarBorder" :src="edge.node.author.photo" :alt="'Twitter profile picture of' + edge.node.author.name" />
             </a>
           </div>
         </div>

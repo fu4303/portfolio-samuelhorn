@@ -5,7 +5,7 @@
     />
     <div 
       v-html="$page.post.content"
-      class="e-content container markdown max-w-960 mb-64"
+      class="e-content container markdown max-w-960 mb-64 xxl:max-w-1200"
     />
     <PostMentions :mentions="$page.mentions" :url="$page.post.path" :title="$page.post.title" />
   </article>
