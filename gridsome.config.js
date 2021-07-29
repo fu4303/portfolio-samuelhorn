@@ -9,7 +9,7 @@ const postcssConfig = require('./postcss.config.js')
 module.exports = {
   siteName: 'samuelhorn.com',
   siteDescription: 'Web designer & front-end web developer from Sweden who craft smooth experiences with modern web technology, always with characteristic design and performance in focus.',
-  siteUrl: process.env.GRIDSOME_BASE_PATH,
+  siteUrl: https://portfolio-samuelhorn-jk2jhasry-fu4303.vercel.app,
 
   templates: {
     Project: '/projects/:name',
