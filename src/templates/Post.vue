@@ -104,7 +104,7 @@ export default {
 </script>
 
 <page-query>
-query Post ($id: ID!, $path: String!) {
+query Post ($id: ID!) {
   post: post (id: $id) {
     title
     path
@@ -114,7 +114,6 @@ query Post ($id: ID!, $path: String!) {
     category {
       id
       title
-      path
     }
     description
     content
