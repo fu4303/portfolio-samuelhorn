@@ -48,13 +48,6 @@ module.exports = {
       }
     },
     {
-      use: '@zefman/gridsome-source-webmention',
-      options: {
-        domain: 'samuelhorn.com',
-        token: (process.env.WM_TOKEN ? process.env.WM_TOKEN : '')
-      },
-    },
-    {
       use: 'gridsome-plugin-feed',
       options: {
         contentTypes: ['Post'],
