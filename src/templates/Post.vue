@@ -7,19 +7,16 @@
       v-html="$page.post.content"
       class="e-content container markdown max-w-960 mb-64 xxl:max-w-1200"
     />
-    <PostMentions :mentions="$page.mentions" :url="$page.post.path" :title="$page.post.title" />
   </article>
 </template>
 
 <script>
 import PostHero from '~/components/PostHero.vue'
-import PostMentions from '~/components/PostMentions.vue'
 import colors from '../mixins/colors'
 
 export default {
   components: {
     PostHero,
-    PostMentions
   },
   mixins: [colors],
   mounted() {
@@ -121,24 +118,6 @@ query Post ($id: ID!, $path: String!) {
     }
     description
     content
-  }
-  mentions: allWebMention(filter: { wmTarget: { regex: $path } }) {
-    edges {
-      node {
-        wmId
-        url
-        wmProperty
-        wmSource
-        content {
-          text
-        }
-        author {
-          name
-          photo
-          url
-        }
-      }
-    }
   }
 }
 </page-query>
